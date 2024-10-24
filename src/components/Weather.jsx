@@ -35,7 +35,6 @@ const Weather = () => {
     }
 
     const search = async (city)=>{
-
         if(city === ""){
             alert("Enter City Name")
             return;
@@ -43,7 +42,6 @@ const Weather = () => {
 
         try {
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
-        
             const response = await fetch(url);
             const data = await response.json();
 
@@ -52,18 +50,16 @@ const Weather = () => {
                 return;
             }
 
-            console.log(data); // for output in console
+          //  console.log(data); // for output in console
             const icon = allIcons[data.weather[0].icon] || clear_icon;
-
             setWeatherData({
                 humidity: data.main.humidity,
                 windSpeed: data.wind.speed,
                 temperature: Math.floor(data.main.temp),
                 location: data.name,
                 icon: icon
-                //weather: data.weather[0].description,
+                //weather: data.weather[0].description, /// to add weather description (not being used currently)
             })
-
         } catch (error) {
             setWeatherData(false);
             console.error("Error in fetching weather data")
@@ -74,16 +70,16 @@ const Weather = () => {
         search("chittagong");
     },[])
 
-   /* const handleKeyDown = (event) => {
+    const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             search(inputRef.current.value);
         }
-    }; */
-  
+    };
+    
     return (
     <div className='weather'>
         <div className='search-bar'>
-            <input ref={inputRef} type="text" placeholder='Search City' /* onKeyDown={handleKeyDown}*/ />
+            <input ref={inputRef} type="text" placeholder='Search City' onKeyDown={handleKeyDown}/>
             <img src={search_icon} onClick={()=>search(inputRef.current.value)}/>
         </div>
 
