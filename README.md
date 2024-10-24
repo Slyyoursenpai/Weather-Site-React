@@ -1,3 +1,13 @@
+# Weather Web App using React JS 
+
+A simple WeatherWeb App made using React JS while learning JavaScript and React.
+
+Uses Open Weather API. 
+
+Setup React to host locally to view.
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
