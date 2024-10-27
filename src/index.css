@@ -9,7 +9,48 @@
 }
 
 .app{
+
   min-height: 100vh;
   display: grid;
-  background: #e2d4ff;
+  background: #2b2828;
+  padding: 40px;
+}
+
+.title{
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(229, 208, 213);
+  font-family: "Poppins";
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .app {
+    padding: 15px;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+}
+
+/* 4K Display Adjustments */
+@media (min-width: 2560px) {
+  .app {
+    padding: 100px; 
+  }
+  .title {
+    font-size: 3rem;
+    margin-top: 30px;
+  }
 }
