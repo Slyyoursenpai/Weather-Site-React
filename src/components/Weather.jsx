@@ -57,8 +57,8 @@ const Weather = () => {
                 windSpeed: data.wind.speed,
                 temperature: Math.floor(data.main.temp),
                 location: data.name,
-                icon: icon
-                //weather: data.weather[0].description, /// to add weather description (not being used currently)
+                icon: icon,
+                weather: data.weather[0].description, /// to add weather description (not being used currently)
             })
         } catch (error) {
             setWeatherData(false);
@@ -87,6 +87,7 @@ const Weather = () => {
             <img src={weatherData.icon} className='weather-icon'/>
         <p className='temperature'>{weatherData.temperature}°C</p>
         <p className='location'>{weatherData.location}</p>
+        <div className="description">{weatherData.weather}</div>
         <div className='weather-data'>
             <div className="col">
                 <img src={humidity_icon}/>

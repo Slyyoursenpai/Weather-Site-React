@@ -49,6 +49,13 @@
     font-size: 40px;
 }
 
+.description{
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    font-style: italic;
+}
+
 .weather-data{
     width: 100%;
     margin-top: 40px;
