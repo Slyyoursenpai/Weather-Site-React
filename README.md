@@ -6,6 +6,8 @@ Uses Open Weather API.
 
 Setup React to host locally to view.
 
+![weather](https://github.com/user-attachments/assets/3adaa50f-3f1e-4570-9937-847f0c1ded40)
+
 
 
 # React + Vite
